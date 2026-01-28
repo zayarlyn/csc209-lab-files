@@ -94,7 +94,6 @@ public class Product {
         fpt.readInt();
         byte[] productName = new byte[20];
         fpt.read(productName, 0, 20);
-        System.out.println(productName[0] + "," + new String(productName));
         String pName = new String(productName).strip();
         if (pName.equals(name)) return pName + " found at row " + row;
         fpt.seek(fpt.getFilePointer() + 136 - 4 - 20);
